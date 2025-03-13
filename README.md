@@ -3,6 +3,7 @@
 Här beskrivs och samlas all information om projektet [insert projektnamn här].
 
 ## Förslag
+
 ### namnförslag
 
 ## Kravspecifikation
@@ -11,7 +12,7 @@ Nedan följer en beskrivning av [insert projektnamn här].
 
 ### grundidé
 
-Vår idé är att skapa en sajt där användaren enkelt ska kunna hitta de produkter denne söker och införskaffa dessa. 
+Vår idé är att skapa en sajt där användaren enkelt ska kunna hitta de produkter denne söker och införskaffa dessa.
 
 ### mål
 
@@ -86,15 +87,26 @@ Nedan följer user stories för sidan i stort. För user stories för enskilda k
 
 ## Schema
 
-Utgånspunkten är samling vid 9.30 ifall morgonsamling initierad av lärarna utgår. I annat fall sker samling 5 minuter efter morgonsamling initierad av lärare avslutas. 
+Utgånspunkten är samling vid 9.30 ifall morgonsamling initierad av lärarna utgår. I annat fall sker samling 5 minuter efter morgonsamling initierad av lärare avslutas.
 
 ### mötesschema
+
+#### 13/3
+
+* 9.30-9.45 - gemensam samling i klassen
+* 9.45-10.00 - rast
+* 10.00-11.07 - morgonmöte i teamet
+* 11.07-11.15 - rast
+* 11.15-11.45 Kolla igenom samlingsdokumentet. Prova att lägga till/ändra i egen branch. Förslagsvis kan man till exempel lägga namnförslag för projektet.
+* 11.45-12.00 - återsamling i gruppen
+* 12.00-13.00 - lunch
+* 13.15 - återsamling efter lunch
 
 ### sprintschema
 
 ### Deadlines/viktiga milstolpar
 
-## Projektverktyg och ramverk 
+## Projektverktyg och ramverk
 
 Här samlas information om vilka verktyg, ramverk, bibliotek och tekniker vi använder.
 
@@ -128,8 +140,8 @@ Här beskrivs arbetsprocessen vi ämnar följa för att underlätta utvecklinsar
 * alla items som finns men ej är redo att påbörjas finns i backlog
 * items som är redo att plockas hamnar i ready
 * när man påbörjar ett item flyttar man detta till in progress
-* när man känner sig klar flyttar med ett item flyttar man det till review och requestar review från en eller flera medlemmar
-* när man fått ok på review av sitt item skapar man ett pull request och bjuder in en eller flera medlemmar att genomföra den
+* när man känner sig klar flyttar med ett item flyttar man det till review
+* efter att man flyttat sitt item till review skapar man ett pull request och bjuder in en eller flera medlemmar att genomföra den
 * finns ingen konflikt kan pull requesten enkelt godkännas av vem som helst
 * finns konflikt bör mergen diskuteras av de som har bidragit till kodstyckenna som är i konflikt och eventuellt övriga i gruppen
 
@@ -153,7 +165,7 @@ Nedan länkas alla designskisser.
 
 #### wireframes
 
-[länk till wireframe]
+[länk till wireframe](https://www.figma.com/design/FCcFWQX3Y4WfaGU0DRqaPQ/Grupp-1?node-id=0-1&p=f&t=Fn8sSogYjSQ7p5sD-0)
 
 #### style guides
 
@@ -165,6 +177,23 @@ Nedan länkas alla designskisser.
 
 Här definieras alla grundkomponenter som skall finnas i appliaktionen.
 
+Formatet är komponentnummer följt av namn ex. 3. cart button
+
+1) nånting
+2) nånting
+3) cart button
+
+
 ### user stories
 
 Här läggs user stories för alla komponenter i applikationen
+
+formatet är komponentnamn från rubriken komponentbibliotek inklusive nummer följt av en paragraf med innehållet i user storyn. 
+
+En bra grundmall är: Som ***[Användare t.ex kunde eller utvecklare]*** vill jag kunna **[*vad det är komponenten gör från perspektivet av användaren*]** så att jag kan **[*själva syftet med komponenten*]**.
+
+exempel följer nedan
+
+#### #3 cart button
+
+Som **kund** vill jag kunna trycka på en knapp högst upp på sidan där jag kan komma till min kundkorgsvy så att jag kan se mina varor, ta bort de jag inte vill ha och checka ut om jag är nöjd.
