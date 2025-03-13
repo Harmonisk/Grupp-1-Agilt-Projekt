@@ -2,6 +2,9 @@
 
 Här beskrivs och samlas all information om projektet [insert projektnamn här].
 
+## Förslag
+### namnförslag
+
 ## Kravspecifikation
 
 Nedan följer en beskrivning av [insert projektnamn här].
