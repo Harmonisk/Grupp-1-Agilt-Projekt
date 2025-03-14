@@ -181,6 +181,10 @@ Nedan länkas alla designskisser.
 
 Här definieras alla grundkomponenter som skall finnas i appliaktionen.
 
+#### Component library
+
+[Google doc](https://docs.google.com/document/d/1JOHIbR7N138nmvadSs7jaZGplh4xJQa2Xozrw4snhoM/edit?tab=t.0)
+
 1. global header  
   1. nav
     1.
