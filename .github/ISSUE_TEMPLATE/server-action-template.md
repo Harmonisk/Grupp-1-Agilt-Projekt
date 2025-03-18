@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-# [action name]
+# [actionName]
 
 ## Acceptance
 * [criteria 1]
