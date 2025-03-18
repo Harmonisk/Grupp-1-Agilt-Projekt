@@ -14,7 +14,7 @@ assignees: ''
 ***
 
 ## acceptance criteria
- *criteria 1
+ * [criteria 1]
 
 ## used components
- *component 1
+ * [component 1]
