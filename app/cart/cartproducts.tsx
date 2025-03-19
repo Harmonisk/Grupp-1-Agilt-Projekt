@@ -15,8 +15,11 @@ export function CartProducts() {
                     onChange={() => ac.setShowSavedList(!ac.showCartList)} />
             </label>
         </div>
-        Kort eller lista med produkter
-{/*        {ac.showCartList ?
+        {ac.myProducts.map((p, i) => <div key={"a" + i}>
+            <div>{p.title}</div>
+            <div>{p.price}</div>
+        </div>)}
+        {/*        {ac.showCartList ?
             <ProductList products={ac.myProducts} /> :
             <Cards products={ac.myProducts} isCart={true} />}
     */}
