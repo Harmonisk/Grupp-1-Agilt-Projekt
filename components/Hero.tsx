@@ -15,7 +15,7 @@ export default function Hero() {
         onClick={() => console.log("Button clicked")}
         className="rounded-md bg-blue-500 text-white"
       >
-        Come on shooping
+        Come on shooping!
       </Button>
     </div>
   );
