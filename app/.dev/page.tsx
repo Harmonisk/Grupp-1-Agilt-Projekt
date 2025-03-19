@@ -7,7 +7,7 @@ export default async function Home() {
     const response:Product = await fetchSingleProduct(1);
     return (
     <>
-      <h2>{}</h2>
+      <h2>{response.title}</h2>
     </>
     
   );
