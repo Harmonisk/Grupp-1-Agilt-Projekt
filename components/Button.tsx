@@ -1,6 +1,6 @@
 // Type: Component
 // Description:
-// Button component that can be used to navigate to a different page or trigger an action.
+// Can be used to navigate to a different page or trigger an action.
 // It can be used with an icon and a text.
 // It can be used with a href to navigate to a different page or without a href to trigger an action.
 // It can be used with a disabled prop to disable the button.
