@@ -1,6 +1,7 @@
 // Type: Component
 // Description:
 // Button component that takes children and an onClick function
+// Additional comment
 
 import React from "react";
 
