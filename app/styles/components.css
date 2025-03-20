@@ -1,0 +1,12 @@
+@layer components {
+  .hero {
+    @apply flex flex-col items-center justify-center bg-amber-600 text-white p-8;
+  }
+  .btn {
+    padding: 10px;
+  }
+
+  .global-footer {
+    @apply bg-gray-800 text-white p-8;
+  }
+}
