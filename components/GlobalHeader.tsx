@@ -10,7 +10,7 @@ import React from "react";
 
 export default function GlobalHeader() {
   return (
-    <header>
+    <header className="global-header">
       <div className="logo">Product name</div>
       {/* <MainMenu></MainMenu> */}
 
