@@ -10,9 +10,9 @@ type ButtonProps = {
   className?: string;
   onClick?: () => void;
 };
-export default function Button({ children, onClick }: ButtonProps) {
+export default function Button({ children, onClick, className}: ButtonProps) {
   // Base styles for the button
-  const classes = `rounded-md flex flex-items-center gap-2`;
+  const classes = `rounded-md flex flex-items-center gap-2 ${className}`;
   return (
     <button onClick={onClick} className={classes}>
       {children}
