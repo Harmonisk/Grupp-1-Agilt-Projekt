@@ -1,13 +1,13 @@
 import React from "react";
-import Button from "./Button";
+// import Button from "./Button";
 
 export default function GlobalHeader() {
   return (
-    <div>
+    <header>
       <div className="logo">Product name</div>
       {/* <MainMenu></MainMenu> */}
 
       {/* <Button></Button> */}
-    </div>
+    </header>
   );
 }
