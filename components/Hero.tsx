@@ -13,10 +13,7 @@ export default function Hero() {
     <div className="hero">
       <h1>Welcome to this amazing store.</h1>
       <p>Here you find all things that you almost need.</p>
-      <Button
-        onClick={() => console.log("Button clicked")}
-        className="rounded-md bg-blue-500 text-white"
-      >
+      <Button onClick={() => console.log("Button clicked")}>
         Come on shooping!
       </Button>
     </div>
