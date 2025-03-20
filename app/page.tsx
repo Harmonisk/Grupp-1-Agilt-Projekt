@@ -14,6 +14,7 @@ export default function Home() {
         <SubHeadline>Featured products</SubHeadline>
         {/* <ProductList></ProductList> */}
       </main>
+
       {/* <GlobalFooter></GlobalFooter> */}
     </>
   );
