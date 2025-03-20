@@ -21,15 +21,25 @@ export default function ProductCard({ id }: { id: number }) {
 	return (
 		<div className="w-48 h-64 bg-white text-black rounded-lg overflow-hidden flex flex-col">
 			<div className="h-4/7 w-auto relative p-5">
-				{product && <Image src={product.images[0]} alt="product" layout="fill" objectFit="cover" />}
+			{!imageLoaded && (
+          <div className="w-full h-full flex items-center justify-center">
+            <span>Loading image...</span>
+          </div>
+        )}
+				{product && <Image src={product.images[0]} alt="product" layout="fill" objectFit="cover" onLoadingComplete={() => setImageLoaded(true)}/>}
 			</div>
-			<div className="h-3/7 bg-[#D9D9D9] p-2 flex flex-col justify-between">
-				<h2 className="text-md font-semibold leading-4 break-words">{product && product.title}</h2>
+				
+			<div className="h-3/7 bg-[#D9D9D9] p-2 flex justify-between flex-col-reverse">
+				
 				<div className="gap-3">
-					<h2>{product && product.price} kr</h2>
+					{imageLoaded && <h2>{product && product.price} kr</h2>}
+					
+				
 					<AddToCartButton />
 				</div>
+				{imageLoaded && <h2 className="text-md font-semibold leading-4 break-words">{product && product.title}</h2>}
 			</div>
+		
 		</div>
 	);
 }
