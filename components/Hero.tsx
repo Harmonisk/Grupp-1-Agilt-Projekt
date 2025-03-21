@@ -10,7 +10,7 @@ import Button from "./Button";
 
 export default function Hero() {
   return (
-    <div className="hero">
+    <div className="hero color">
       <h1>Welcome to this amazing store.</h1>
       <p>Here you find all things that you almost need.</p>
       <Button onClick={() => console.log("Button clicked")}>

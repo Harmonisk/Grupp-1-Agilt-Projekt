@@ -1,6 +1,7 @@
 //Component: LandingPage
 //Description:
 
+import Container from "@/components/Container";
 import GlobalFooter from "@/components/GlobalFooter";
 import GlobalHeader from "@/components/GlobalHeader";
 import Hero from "@/components/Hero";
@@ -15,7 +16,7 @@ export default function Home() {
       <Hero></Hero>
       <Main>
         <SubHeadline>Featured products</SubHeadline>
-        {/* <ProductList></ProductList> */}
+        <Container>{/* <ProductList></ProductList> */}Productlist</Container>
       </Main>
 
       <GlobalFooter />
