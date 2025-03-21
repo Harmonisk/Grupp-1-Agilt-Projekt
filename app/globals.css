@@ -1,8 +1,21 @@
+/*
+This is really awesome
+https://tailwindcss.com/docs/theme
+https://tailwindcss.com/docs/theme#theme-variable-namespaces
+
+*/
+
 @import "tailwindcss";
+@import "./styles/components.css";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+@theme {
+  --color-mint-500: oklch(0.72 0.11 178);
+  --color-yellow: #f6e05e;
 }
 
 @theme inline {
@@ -10,6 +23,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-primary: var(--color-yellow);
+
+  /* Simplying our project with on custom breakpoint TailWind class.*/
+  --breakpoint-desktop: 1024px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,7 +44,3 @@ body {
 }
 
 /* From here we using some TailWind logic */
-
-@theme {
-  --color-mint-500: oklch(0.72 0.11 178);
-}
