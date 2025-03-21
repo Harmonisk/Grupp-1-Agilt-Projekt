@@ -12,7 +12,7 @@ type ButtonProps = {
 };
 export default function Button({ children, onClick, className }: ButtonProps) {
   // We add the 'btn' class to the button to easily style all buttons via Tailwind CSS
-  const classes = `btn ${className}`;
+  const classes = `button ${className}`;
   return (
     <button onClick={onClick} className={classes}>
       {children}
