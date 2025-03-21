@@ -1,3 +1,9 @@
+// Description: This component is used to display a product card
+// with an image, title, price and an add to cart button.
+// The inputs are the id of the product and an optional scale (1x default).
+// Example usage: <ProductCard id={8} scale={2}/> , 
+// where id is the id of the product and scale is the scale of the card.
+
 'use client'
 import AddToCartButton from "./AddToCartButton";
 import { fetchSingleProduct } from "@/actions/server-actions";
@@ -5,9 +11,15 @@ import React, { useEffect, useState } from "react";
 import Product from "@/interfaces/product";
 import Image from "next/image";
 
-export default function ProductCard({ id }: { id: number }) {
+interface ProductCardProps{
+	id:number;
+	scale?:number;
+}
+
+export default function ProductCard({ id, scale }: ProductCardProps) {
 	const [product, setProduct] = useState<Product | null>(null);
 	const [imageLoaded, setImageLoaded] = useState(false);
+	!scale && (scale = 1);
 
 	useEffect(() => {
 		async function getProduct() {
@@ -19,7 +31,8 @@ export default function ProductCard({ id }: { id: number }) {
 	}, [id]);
 
 	return (
-		<div className="w-48 h-64 bg-white text-black rounded-lg overflow-hidden flex flex-col">
+		<div className=" bg-white text-black rounded-lg overflow-hidden flex flex-col"
+			style={{height: `calc(16rem * ${scale})`, width: `calc(12rem * ${scale})`}}>
 			<div className="h-4/7 w-auto relative p-5">
 			{!imageLoaded && (
           <div className="w-full h-full flex items-center justify-center">
