@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <GlobalHeader />
 
-      <Hero></Hero>
+      <Hero />
       <Main>
         <SubHeadline>Featured products</SubHeadline>
         <Container>{/* <ProductList></ProductList> */}Productlist</Container>
