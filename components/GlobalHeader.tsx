@@ -13,7 +13,7 @@ export default function GlobalHeader() {
   return (
     <header className="global-header">
       <Container>
-        <div className="logo">Product name</div>
+        <div className="global-header__logo">Product name</div>
         {/* <MainMenu></MainMenu> */}
 
         {/* <Button></Button> */}
