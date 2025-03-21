@@ -4,7 +4,6 @@ Här beskrivs och samlas all information om projektet [insert projektnamn här].
 
 ## Förslag
 
-
 ### Namnförslag
 
 S70R3FE25 – All your needs.
@@ -95,18 +94,18 @@ Utgånspunkten är samling vid 9.30 ifall morgonsamling initierad av lärarna ut
 
 ### Mötesschema
 
-
 ### Sprintschema
+
 #### 13/3
 
-* 9.30-9.45 - gemensam samling i klassen
-* 9.45-10.00 - rast
-* 10.00-11.07 - morgonmöte i teamet
-* 11.07-11.15 - rast
-* 11.15-11.45 Kolla igenom samlingsdokumentet. Prova att lägga till/ändra i egen branch. Förslagsvis kan man till exempel lägga namnförslag för projektet.
-* 11.45-12.00 - återsamling i gruppen
-* 12.00-13.00 - lunch
-* 13.15 - återsamling efter lunch
+- 9.30-9.45 - gemensam samling i klassen
+- 9.45-10.00 - rast
+- 10.00-11.07 - morgonmöte i teamet
+- 11.07-11.15 - rast
+- 11.15-11.45 Kolla igenom samlingsdokumentet. Prova att lägga till/ändra i egen branch. Förslagsvis kan man till exempel lägga namnförslag för projektet.
+- 11.45-12.00 - återsamling i gruppen
+- 12.00-13.00 - lunch
+- 13.15 - återsamling efter lunch
 
 ### Deadlines/viktiga milstolpar
 
@@ -138,22 +137,51 @@ Här beskrivs arbetsprocessen vi ämnar följa för att underlätta utvecklinsar
 
 ### Arbetsflöde i github projects
 
-1) plocka items som man känner passar en, eller är intressanta
-2) hör av med gruppmedlemmar under mötet ifall andra är intresserade av samma items
-3) items kan utvecklas av flera personer samtidigt om så önskas, detta innebär dock att det måste koordineras korrekt
-4) alla items som finns men ej är redo att påbörjas finns i backlog
-5) items som är redo att plockas hamnar i ready
-6) när man påbörjar ett item flyttar man detta till in progress
-7) när man känner sig klar flyttar med ett item flyttar man det till review
-8) efter att man flyttat sitt item till review skapar man ett pull request och bjuder in en eller flera medlemmar att genomföra den
-9) finns ingen konflikt kan pull requesten enkelt godkännas av vem som helst
-10) finns konflikt bör mergen diskuteras av de som har bidragit till kodstyckenna som är i konflikt och eventuellt övriga i gruppen
+1. plocka items som man känner passar en, eller är intressanta
+2. hör av med gruppmedlemmar under mötet ifall andra är intresserade av samma items
+3. items kan utvecklas av flera personer samtidigt om så önskas, detta innebär dock att det måste koordineras korrekt
+4. alla items som finns men ej är redo att påbörjas finns i backlog
+5. items som är redo att plockas hamnar i ready
+6. när man påbörjar ett item flyttar man detta till in progress
+7. när man känner sig klar flyttar med ett item flyttar man det till review
+8. efter att man flyttat sitt item till review skapar man ett pull request och bjuder in en eller flera medlemmar att genomföra den
+9. finns ingen konflikt kan pull requesten enkelt godkännas av vem som helst
+10. finns konflikt bör mergen diskuteras av de som har bidragit till kodstyckenna som är i konflikt och eventuellt övriga i gruppen
 
 ### Kodstandard
 
 Nedan följer standarder att följa under utveckling av kod
 
 #### Namnkoventioner
+
+##### Komponenter
+
+Komponents filnanm ska följa samma syntax som funktionens namn.
+Ex. GlobalHeader döps till GlobalHeader.tsx
+
+##### **Principen bakom klassnamngivningen**
+
+För att förenkla styling och göra kopplingen mellan CSS och komponenter tydlig, namnges huvudklassen i en komponent efter dess komponentnamn. Därefter används en **BEM-liknande struktur** (Block-Element-Modifier) för att definiera element inom komponenten.
+
+###### **Exempel på struktur och klassnamngivning**
+
+I komponenten **GlobalHeader** ser vi att:
+
+- **Parent-elementet får en klass som motsvarar komponentens namn** (global-header).
+- **Element inom komponenten får klasser som är relaterade till parentens namn** (t.ex. global-header__logo och global-heade__nav).
+
+```
+export default function GlobalHeader() {
+  return (
+    <header className="global-header">
+      <div className="global-header__logo">Brand</div>
+      <nav className="global-header__nav">
+        <MainMenu />
+      </nav>
+    </header>
+  );
+}
+```
 
 ### Design
 
@@ -185,28 +213,27 @@ Här definieras alla grundkomponenter som skall finnas i appliaktionen.
 
 [Google doc](https://docs.google.com/document/d/1JOHIbR7N138nmvadSs7jaZGplh4xJQa2Xozrw4snhoM/edit?tab=t.0)
 
-1. global header  
-  1. nav
-    1.
-  3. cart button
-3. landing
-4. all products
-5. indivudual product
-6. cart
-7. global footer
-  1. contact info
-
- 
+1. global header
+2. nav
+   1.
+3. cart button
+4. landing
+5. all products
+6. indivudual product
+7. cart
+8. global footer
+9. contact info
 
 ### User stories
+
 =======
 Formatet är komponentnummer följt av namn ex. 3. cart button
 
 Här läggs user stories för alla komponenter i applikationen
 
-formatet är komponentnamn från rubriken komponentbibliotek inklusive nummer följt av en paragraf med innehållet i user storyn. 
+formatet är komponentnamn från rubriken komponentbibliotek inklusive nummer följt av en paragraf med innehållet i user storyn.
 
-En bra grundmall är: Som ***[Användare t.ex kunde eller utvecklare]*** vill jag kunna **[*vad det är komponenten gör från perspektivet av användaren*]** så att jag kan **[*själva syftet med komponenten*]**.
+En bra grundmall är: Som **_[Användare t.ex kunde eller utvecklare]_** vill jag kunna **[*vad det är komponenten gör från perspektivet av användaren*]** så att jag kan **[*själva syftet med komponenten*]**.
 
 exempel följer nedan
 
