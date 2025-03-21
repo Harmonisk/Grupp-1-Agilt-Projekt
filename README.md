@@ -168,7 +168,7 @@ För att förenkla styling och göra kopplingen mellan CSS och komponenter tydli
 I komponenten **GlobalHeader** ser vi att:
 
 - **Parent-elementet får en klass som motsvarar komponentens namn** (global-header).
-- **Element inom komponenten får klasser som är relaterade till parentens namn** (t.ex. global-header__logo och global-heade__*nav).
+- **Element inom komponenten får klasser som är relaterade till parentens namn** (t.ex. global-header__logo och global-heade__nav).
 
 ```
 export default function GlobalHeader() {
