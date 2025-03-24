@@ -1,4 +1,5 @@
 import Product from "@/interfaces/product";
+import Category from "@/interfaces/category";
 const BASE_URL = "https://dummyjson.com/products"
 
 export async function fetchAllProducts(){
@@ -16,5 +17,14 @@ export async function fetchSingleProduct(id:number){
         throw new Error(`Server error, invalid response: ${response}`)
     }
     const data:Product = await response.json();
+    return data;
+}
+
+export async function fetchAllCategories(){
+    const response = await fetch(`${BASE_URL}/categories`);
+    if(!response.ok){
+        throw new Error(`Server error, invalid response: ${response}`)
+    }
+    const data:Category[] = await response.json();
     return data;
 }
