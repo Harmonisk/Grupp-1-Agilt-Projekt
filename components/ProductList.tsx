@@ -1,3 +1,6 @@
+//Component: ProductList
+//Description: Som utvecklare vill jag kunna visa kunden produkter i form av en lista.
+
 import React from "react";
 import ProductCard from "./ProductCard";
 import {
@@ -24,6 +27,7 @@ export default async function ProductList({
   if (category) {
     products = await fetchProductsByCategory(category);
   } else {
+    //Featured is to be decided around and logic should be inside the fetchAllProducts function
     products = await fetchAllProducts(limit, page, featured);
   }
 
