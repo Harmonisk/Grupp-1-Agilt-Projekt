@@ -1,3 +1,6 @@
+// Component: AddToCartButton
+// Description: Som användare vill jag kunna lägga till produkt i varukorg från ett produktkort samt lära mig mer om produkten innan köp.
+
 "use client";
 import Button from "./Button";
 import React from "react";
