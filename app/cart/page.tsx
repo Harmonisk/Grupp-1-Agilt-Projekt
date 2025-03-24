@@ -1,15 +1,16 @@
-import React from "react";
-import { Metadata } from "next";
-import { CartProducts } from "@/app/cart/cartproducts";
+import GlobalFooter from "@/components/GlobalFooter";
+import GlobalHeader from "@/components/GlobalHeader";
+import Main from "@/components/Main";
 
-export const metadata: Metadata = {
-  title: "Acme Inc"
-};
-
-export default async function CartPage() {
-  return (
-    <main className="grid gap-4 ml-4">
-      <CartProducts />
-    </main>
-  );
+export default function CartPage(){
+    
+    return(
+        <>
+            <GlobalHeader />
+            <Main>
+                <h2>Cart Page</h2>
+            </Main>
+            <GlobalFooter />
+        </>
+    );
 }
