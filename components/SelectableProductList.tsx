@@ -2,20 +2,25 @@
 // Desciption: Som användare vill jag kunna filtrera och sortera en lista av produkter
 // så att jag lättare kan hitta de produkter jag är intresserad av.
 
-import React from "react";
 import ProductList from "./ProductList";
-import SubHeadline from "./SubHeadline";
-export default function SelectableProductList({
+import { fetchSingleProduct } from "@/actions/server-actions";
+
+export default async function SelectableProductList({
   params,
 }: {
-  params: { name: string };
+  params: { name?: string; id?: number };
 }) {
+  // If category page, we use the category name from the URL.
+  let category = params.name;
+  // If product page, we fetch the product and use the category from the product.
+  if (!category && params.id) {
+    const product = await fetchSingleProduct(params.id);
+    category = product.category;
+  }
   return (
     <div className="selectable-product-list">
-      {/* params.name would be "Category name" when called from within category/[name]/page.tsx */}
-      <SubHeadline>{params.name}</SubHeadline>
       {/* <FilterSortBar></FilterSortBar> */}
-      <ProductList category={params.name}></ProductList>
+      <ProductList category={category} />
       {/* <Pagination></Pagination> */}
     </div>
   );
