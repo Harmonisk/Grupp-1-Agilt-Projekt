@@ -7,12 +7,12 @@ import React from "react";
 
 type ButtonProps = {
   children: React.ReactNode;
-  className?: string;
+  className?: string; // We add the className prop to allow for custom styling
   onClick?: () => void;
 };
-export default function Button({ children, onClick }: ButtonProps) {
-  // Base styles for the button
-  const classes = `rounded-md flex flex-items-center gap-2`;
+export default function Button({ children, onClick, className }: ButtonProps) {
+  // We add the 'btn' class to the button to easily style all buttons via Tailwind CSS
+  const classes = `button ${className}`;
   return (
     <button onClick={onClick} className={classes}>
       {children}
