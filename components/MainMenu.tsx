@@ -1,3 +1,6 @@
+// Component: MainMenu
+// Description: Som användare vill jag ha en navigation mellan kategorisidorna så att sidorna ska kännas lättåtkomliga för mig
+
 import { fetchAllCategories } from "@/actions/server-actions";
 import React from "react";
 
