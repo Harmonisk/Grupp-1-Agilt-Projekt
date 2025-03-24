@@ -3,6 +3,7 @@
 //-The component exist at the bottom of parent component
 
 import React from "react";
+import ContactInfo from "./ContactInfo";
 
 export default function GlobalFooter() {
   return (
@@ -10,7 +11,7 @@ export default function GlobalFooter() {
       <div className="container">
         <div className="wrapper">
           <div className="footer-brand"></div>
-          {/* <ContactInfo></ContactInfo> */}
+          <ContactInfo />
         </div>
       </div>
       <p>&copy; 2025 Company Name</p>
