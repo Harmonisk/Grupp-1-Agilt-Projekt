@@ -28,3 +28,13 @@ export async function fetchAllCategories(){
     const data:Category[] = await response.json();
     return data;
 }
+
+export async function fetchProductsByCategory(category:Category){
+    const response = await fetch(`${category.url}`);
+    if(!response.ok){
+        throw new Error(`Server error, invalid response: ${response}`)
+    }
+    const data:Product[] = await response.json();
+    return data;
+}
+
