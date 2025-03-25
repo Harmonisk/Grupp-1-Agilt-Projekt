@@ -1,32 +1,16 @@
-@layer components {
-  .product-list {
-    @apply grid grid-cols-12 gap-8;
-    .product-card {
-      @apply flex flex-col col-span-6 desktop:col-span-3 rounded-2xl shadow-2xl;
-    }
+@import "./components/_product-list.css";
 
-    .product-card__image {
-      @apply w-auto aspect-square object-cover;
-    }
-    .product-card__wrapper {
-      @apply h-full p-4;
-    }
-    .product-info {
-      @apply h-full flex flex-col;
-    }
-    .product-info__title {
-      @apply text-red-800;
-    }
-    .product-info__price {
-      @apply text-red-800 text-2xl;
-    }
-    .button {
-      @apply ml-auto mt-auto align-bottom;
-    }
-  }
+@layer components {
   .global-header {
-    @apply flex bg-amber-300;
+    @apply bg-amber-300 p-8;
   }
+  .global-header__container {
+    @apply flex gap-4;
+  }
+  .global-header__logo {
+    @apply flex items-center bg-amber-600 text-2xl text-nowrap;
+  }
+
   .main-menu {
     @apply overflow-x-hidden;
   }
