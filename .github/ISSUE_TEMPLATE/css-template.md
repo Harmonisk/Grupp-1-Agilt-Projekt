@@ -3,7 +3,7 @@
 name: CSS Template
 about: CSS
 title: ''
-labels: ''
+labels: 'css'
 assignees: ''
 
 ---
