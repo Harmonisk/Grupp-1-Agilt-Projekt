@@ -4,17 +4,23 @@ import Button from "./Button"
 export default function Pagination({
     currentPage,
     maxPage,
+    onFirst,
     onPrev,
     onNext,
+    onLast,
 }: {
     currentPage: number,
     maxPage: number,
-    onPrev: () => void,
-    onNext: () => void,
+    onFirst?: () => void,
+    onPrev?: () => void,
+    onNext?: () => void,
+    onLast?: () => void,
 }) {
     return (<>
-        <Button onClick={onPrev}>&lt;</Button>
+        {onFirst && <Button onClick={onFirst}>&lt;&lt;&lt;</Button>}
+        {onPrev && <Button onClick={onPrev}>&lt;</Button>}
         Sida {currentPage} av {maxPage}
-        <Button onClick={onNext}>&gt;</Button>
+        {onNext && <Button onClick={onNext}>&gt;</Button>}
+        {onLast && <Button onClick={onLast}>&gt;&gt;&gt;</Button>}
     </>)
 }
