@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 export default function NavigateToCartButton() {
   const router = useRouter();
   const handleClick = () => {
-    router.push("/checkout");
+    router.push("/cart");
   };
 
   return (
