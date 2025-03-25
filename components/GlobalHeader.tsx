@@ -7,16 +7,16 @@
 
 import React from "react";
 import Container from "./Container";
-// import Button from "./Button";
+import MainMenu from "./MainMenu";
+import NavigateToCartButton from "./NavigateToCartButton";
 
 export default function GlobalHeader() {
   return (
     <header className="global-header">
       <Container>
         <div className="global-header__logo">Product name</div>
-        {/* <MainMenu></MainMenu> */}
-
-        {/* <NavigateToCartButton></NavigateToCartButton> */}
+        <MainMenu />
+        <NavigateToCartButton />
       </Container>
     </header>
   );
