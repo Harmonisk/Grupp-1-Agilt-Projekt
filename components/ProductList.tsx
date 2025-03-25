@@ -34,12 +34,10 @@ export default async function ProductList({
 
   return (
     <ul className="product-list">
-      <ul className="product-list">
-        {/* Moved <li> inside of ProductCard */}
-        {products.map((product) => (
-          <ProductCard key={product.id} {...product} />
-        ))}
-      </ul>
+      {/* Moved <li> inside of ProductCard */}
+      {products.map((product) => (
+        <ProductCard key={product.id} {...product} />
+      ))}
     </ul>
   );
 }
