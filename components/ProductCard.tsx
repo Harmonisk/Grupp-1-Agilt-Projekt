@@ -13,7 +13,6 @@ export default function ProductCard({ id }: { id: number }) {
     async function getProduct() {
       const fetchedProduct = await fetchSingleProduct(id);
       setProduct(fetchedProduct);
-      console.log(fetchedProduct);
     }
     getProduct();
   }, [id]);
@@ -47,8 +46,8 @@ export default function ProductCard({ id }: { id: number }) {
           {imageLoaded && (
             <h4 className="product-info__title">{product && product.title}</h4>
           )}
-
-          <AddToCartButton />
+		
+          {imageLoaded && product && <AddToCartButton product={product}/>}
         </div>
       </div>
     </li>

@@ -15,7 +15,8 @@ export default function AddToCartButton({
   const pc = useProductContext()
 
   const handleClick = () => {
-    pc.setAmount(product, (product.amount ?? 0) + 1)
+    pc.setAmount(product, (product.amount ?? 0) + 1);
+	console.log("product");
   };
 
   return (
