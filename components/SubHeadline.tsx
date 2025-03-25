@@ -9,5 +9,5 @@ export default function SubHeadline({
 }: {
   children: React.ReactNode;
 }) {
-  return <h2>{children}</h2>;
+  return <h2 className="sub-headline">{children}</h2>;
 }
