@@ -10,4 +10,5 @@ export default interface Product{
     brand: string;
     thumbnail: string;
     images: string[];
+    amount?: number;
 }
