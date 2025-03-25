@@ -61,6 +61,13 @@
   }
 
   .header{
-	@apply bg-amber-300 text-white p-4;
+	@apply w-full flex items-center justify-center bg-amber-300  p-4 h-16 border-2 border-black;
+	h1 {
+		@apply text-black font-medium text-3xl font-sans;
+	}
+}
+
+  .footer{
+
   }
 }
