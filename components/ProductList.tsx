@@ -8,9 +8,10 @@ import {
   fetchProductsByCategory,
 } from "@/actions/server-actions";
 import Product from "@/interfaces/product";
+import Category from "@/interfaces/category";
 
 interface ProductListProps {
-  category?: string | string[];
+  category?: Category;
   limit?: number;
   page?: number;
   featured?: boolean;
