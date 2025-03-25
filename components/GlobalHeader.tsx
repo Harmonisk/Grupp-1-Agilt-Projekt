@@ -7,6 +7,7 @@
 
 import React from "react";
 import Container from "./Container";
+import MainMenu from "./MainMenu";
 // import Button from "./Button";
 
 export default function GlobalHeader() {
@@ -14,7 +15,7 @@ export default function GlobalHeader() {
     <header className="global-header">
       <Container>
         <div className="global-header__logo">Product name</div>
-        {/* <MainMenu></MainMenu> */}
+        <MainMenu></MainMenu>
 
         {/* <NavigateToCartButton></NavigateToCartButton> */}
       </Container>
