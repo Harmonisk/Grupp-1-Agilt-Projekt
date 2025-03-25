@@ -19,7 +19,7 @@ export default function ProductCard({ id }: { id: number }) {
   }, [id]);
 
   return (
-    <div className="product-card">
+    <li className="product-card">
       {!imageLoaded && (
         <div className="w-full h-full flex items-center justify-center">
           <span>Loading image...</span>
@@ -51,6 +51,6 @@ export default function ProductCard({ id }: { id: number }) {
           <AddToCartButton />
         </div>
       </div>
-    </div>
+    </li>
   );
 }
