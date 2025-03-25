@@ -1,7 +1,14 @@
 @layer components {
-  .container {
+  .product-list {
+    background-color: red;
+    @apply grid grid-cols-12 gap-8;
+    li {
+      @apply col-span-6 desktop:col-span-4 bg-amber-400;
+    }
+    .product-card__image {
+      @apply w-auto;
+    }
   }
-
   .global-header {
     @apply flex bg-amber-300;
   }
