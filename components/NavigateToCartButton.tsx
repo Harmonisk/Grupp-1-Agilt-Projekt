@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 import Button from "./Button";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function NavigateToCartButton() {
   const router = useRouter();
   const handleClick = () => {
-    router.push("/checkout");
+    router.push("/cart");
   };
 
   return (
