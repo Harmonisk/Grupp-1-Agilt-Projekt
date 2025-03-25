@@ -1,4 +1,28 @@
 @layer components {
+  .container {
+  }
+
+  .global-header {
+    @apply flex bg-amber-300;
+  }
+  .main-menu {
+    @apply overflow-x-hidden;
+  }
+  .main-menu__list {
+    @apply flex;
+    .main-menu__item {
+      @apply text-2xl;
+    }
+  }
+
+  .product-list {
+    background-color: red;
+    @apply grid grid-cols-12 gap-8;
+    li {
+      @apply col-span-6 desktop:col-span-4 bg-amber-400;
+    }
+  }
+
   .hero {
     @apply flex flex-col items-center justify-center bg-amber-600 text-white p-8 gap-2 desktop:text-6xl;
     h1 {
