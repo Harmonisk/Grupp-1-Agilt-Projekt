@@ -1,16 +1,16 @@
 "use client"
 import Product from "@/interfaces/product";
 import Button from "./Button";
+import { useProductContext } from "./ProductContext";
 
 export function RemoveFromCartButton({
     product
 } : {
     product: Product
 }) {
-    // const pc = useProductContext()
+    const pc = useProductContext()
 
-    // Add to button: onClick={() => pc.setAmount(p, 0)}
     return (
-        <Button>Ta bort</Button>
+        <Button onClick={() => pc.setAmount(product, 0)}>Ta bort</Button>
     )
 }
