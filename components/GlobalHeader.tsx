@@ -9,7 +9,6 @@ import React from "react";
 import Container from "./Container";
 import MainMenu from "./MainMenu";
 import NavigateToCartButton from "./NavigateToCartButton";
-// import Button from "./Button";
 
 export default function GlobalHeader() {
   return (
