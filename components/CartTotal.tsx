@@ -1,9 +1,10 @@
 "use client"
+import { useProductContext } from "./ProductContext"
 
 export function CartTotal() {
-    // pc = useProductContext()
+    const pc = useProductContext()
 
     return (<>
-        {/*pc.cart.reduce((a, p) => a + p.amount, 0).toFix(2)*/} kr
+        {pc.cartProducts.reduce((a, p) => a + (p.amount ?? 0) * p.price, 0).toFixed(2)} kr
     </>)
 }

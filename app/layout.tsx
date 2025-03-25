@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ProductProvider } from "@/components/ProductContext";
 
 export const metadata: Metadata = {
   title: "This amazing store – Buy stuff",
@@ -13,7 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ProductProvider>
+          {children}
+        </ProductProvider>
+      </body>
     </html>
   );
 }
