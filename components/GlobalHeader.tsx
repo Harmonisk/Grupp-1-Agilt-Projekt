@@ -6,18 +6,20 @@
 // - the global header contains a cart button
 
 import React from "react";
-import Container from "./Container";
 import MainMenu from "./MainMenu";
 import NavigateToCartButton from "./NavigateToCartButton";
+import Link from "next/link";
 
 export default function GlobalHeader() {
   return (
     <header className="global-header">
-      <Container>
-        <div className="global-header__logo">Product name</div>
+      <div className="global-header__container">
+        <Link href={"/"} className="global-header__logo">
+          Product name
+        </Link>
         <MainMenu />
         <NavigateToCartButton />
-      </Container>
+      </div>
     </header>
   );
 }
