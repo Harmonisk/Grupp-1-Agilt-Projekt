@@ -59,4 +59,8 @@
   .product-card {
     @apply bg-yellow-300 p-4 md:bg-amber-600 md:p-2;
   }
+
+  .header{
+	@apply bg-amber-300 text-white p-4;
+  }
 }
