@@ -2,12 +2,16 @@ import Product from "@/interfaces/product";
 import Category from "@/interfaces/category";
 const BASE_URL = "https://dummyjson.com/products"
 
-export async function fetchAllProducts(){
-    const response = await fetch(BASE_URL);
+export async function fetchAllProducts(limit:number=0,page:number=1 ){
+    const fetchUrl = `${BASE_URL}?${limit>0?'limit='+limit+'skip='+limit*page:'limit=0'}`
+    console.log(fetchUrl);
+    const response = await fetch(`${BASE_URL}?${limit>0?'limit='+limit+'skip='+limit*page:'limit=0'}`);
     if(!response.ok){
         throw new Error(`Server error, invalid response: ${response}`);
     }
+    
     const data:Product[] = await response.json();
+    console.log(data[0]);
     return data;
 }
 
