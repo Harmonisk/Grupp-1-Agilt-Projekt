@@ -2,6 +2,7 @@
 import GlobalFooter from "@/components/GlobalFooter";
 import GlobalHeader from "@/components/GlobalHeader";
 import Main from "@/components/Main";
+import { useProductContext } from "@/components/ProductContext";
 
 export default function CartPage() {
     const pc = useProductContext()
@@ -20,7 +21,7 @@ export default function CartPage() {
                         <th>Pris styck</th>
                         <th>Pris totalt</th>
                     </tr>
-                    {pc.myProducts.map((p, i) => <tr key={"a" + i}>
+                    {pc.cart.map((p, i) => <tr key={"a" + i}>
                         <td>{p.title}</td>
                         <td>{p.price}</td>
                         <td>{/* p.amount */}</td>
