@@ -15,9 +15,8 @@ export default function GlobalHeader() {
     <header className="global-header">
       <Container>
         <div className="global-header__logo">Product name</div>
-        <MainMenu></MainMenu>
-
-        {/* <NavigateToCartButton></NavigateToCartButton> */}
+        <MainMenu />
+        <NavigateToCartButton />
       </Container>
     </header>
   );
