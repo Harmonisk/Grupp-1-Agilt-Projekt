@@ -6,6 +6,7 @@ https://tailwindcss.com/docs/theme#theme-variable-namespaces
 */
 
 @import "tailwindcss";
+@import "./styles/typography.css";
 @import "./styles/components.css";
 
 :root {

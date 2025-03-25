@@ -1,4 +1,7 @@
 @layer components {
+  .sub-headline {
+    @apply bg-amber-300 p-8 flex justify-center;
+  }
   .product-list {
     background-color: red;
     @apply grid grid-cols-12 gap-8;
@@ -31,10 +34,8 @@
   }
 
   .hero {
-    @apply flex flex-col items-center justify-center bg-amber-600 text-white p-8 gap-2 desktop:text-6xl;
-    h1 {
-      @apply text-4xl;
-    }
+    @apply flex flex-col items-center justify-center bg-amber-600 text-white p-8 gap-2;
+
     p {
       @apply text-lg;
     }
@@ -45,7 +46,7 @@
   }
 
   .main {
-    @apply bg-gray-100 text-gray-800 p-8;
+    @apply bg-gray-100 text-gray-800 p-8 gap-16;
   }
 
   .container {
@@ -58,5 +59,9 @@
 
   .product-card {
     @apply bg-yellow-300 p-4 md:bg-amber-600 md:p-2;
+  }
+
+  .button {
+    @apply p-4 border-2;
   }
 }
