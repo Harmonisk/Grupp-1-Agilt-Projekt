@@ -37,16 +37,19 @@ export default function ProductCard({ id }: { id: number }) {
       )}
 
       <div className="product-card__wrapper">
-        <div className="product-card__info">
-          {imageLoaded && <div className="">{product && product.price} kr</div>}
+        <div className="product-info">
+          {imageLoaded && (
+            <div className="product-info__price">
+              {product && product.price} kr
+            </div>
+          )}
+
+          {imageLoaded && (
+            <h4 className="product-info__title">{product && product.title}</h4>
+          )}
 
           <AddToCartButton />
         </div>
-        {imageLoaded && (
-          <h2 className="text-md font-semibold leading-4 break-words">
-            {product && product.title}
-          </h2>
-        )}
       </div>
     </div>
   );
