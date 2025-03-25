@@ -4,10 +4,18 @@
 "use client";
 import Button from "./Button";
 import React from "react";
+import { useProductContext } from "./ProductContext";
+import Product from "@/interfaces/product";
 
-export default function AddToCartButton() {
+export default function AddToCartButton({
+  product
+}: {
+  product: Product
+}) {
+  const pc = useProductContext()
+
   const handleClick = () => {
-    console.log("Button clicked!");
+    pc.setAmount(product, (product.amount ?? 0) + 1)
   };
 
   return (
