@@ -1,11 +1,13 @@
-import { fetchSingleProduct } from "@/actions/server-actions";
+import { fetchAllCategories, fetchProductsByCategory, fetchSingleProduct } from "@/actions/server-actions";
 import Product from "@/interfaces/product";
+import Category from "@/interfaces/category";
 import { fetchAllProducts } from "@/actions/server-actions";
 import Image from "next/image";
 
 
 export default async function Home() {
-    const response:Product[] = await fetchAllProducts(10,2);
+    const cats:Category[]=await fetchAllCategories();
+    const response:Product[] = await fetchProductsByCategory(cats[0],10,0);
     console.log(response[0].brand);
     console.log(typeof response);
     return (
