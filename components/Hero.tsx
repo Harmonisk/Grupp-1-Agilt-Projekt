@@ -11,10 +11,15 @@ import Button from "./Button";
 export default function Hero() {
   return (
     <div className="hero">
-      <h1>Welcome to this amazing store.</h1>
-      <p>Here you find all things that you almost need.</p>
-      <Button onClick={() => console.log("Button clicked")} className="pt-2">
-        Come on shooping!
+      <h1 className="hero__title">Welcome to this amazing store.</h1>
+      <p className="hero__description">
+        Here you find all things that you almost need.
+      </p>
+      <Button
+        onClick={() => console.log("Button clicked")}
+        className="hero__button hero__button--primary"
+      >
+        Come on shopping!
       </Button>
     </div>
   );
