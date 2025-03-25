@@ -2,7 +2,7 @@ import Product from "@/interfaces/product";
 import Category from "@/interfaces/category";
 const BASE_URL = "https://dummyjson.com/products"
 
-export async function fetchAllProducts(limit:number=0,page:number=1, featured: ){
+export async function fetchAllProducts(limit:number=0,page:number=1, featured:boolean=false ){
     const fetchUrl = `${BASE_URL}?${ limit>0 ? 'limit='+limit+'&skip='+limit*page : 'limit=0'}`;
     const response = await fetch(fetchUrl);
     if(!response.ok){
