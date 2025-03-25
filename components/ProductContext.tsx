@@ -3,7 +3,7 @@ import React, { createContext, useContext, useState } from "react";
 import Product from "@/interfaces/product";
 
 interface ProductContextType {
-    cartProducts: Product[];
+    cart: Product[];
     setAmount: (product: Product, amount: number) => void;
 };
 
@@ -20,19 +20,18 @@ export function ProductProvider({
         let list = [...cart];
         let cartProduct = cart.find(p => p.id === product.id);
         if (cartProduct) {
-            //cartprod.amount = Math.max(0, amount);
-            /*if (amount < 1)
-              list = cartProducts.filter(p => p.id !== cartprod?.id); // Remove product from cart
-            */
+            cartProduct.amount = Math.max(0, amount);
+            if (amount < 1)
+              list = cart.filter(p => p.id !== cartProduct?.id); // Remove product from cart
         } else if (amount > 0) {
-            //product.amount = amount;
-            list = [product, ...cart]; // Add product to cart
+            product.amount = amount;
+            list = [...cart, product]; // Add product to cart
         }
         setCart(list);
     };
 
     return (
-        <ProductContext.Provider value={{ cartProducts: cart, setAmount }}>
+        <ProductContext.Provider value={{ cart, setAmount }}>
             {children}
         </ProductContext.Provider>
     );
