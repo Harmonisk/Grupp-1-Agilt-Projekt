@@ -9,12 +9,19 @@ import React from "react";
 import MainMenu from "./MainMenu";
 import NavigateToCartButton from "./NavigateToCartButton";
 import Link from "next/link";
-
+import Image from "next/image";
 export default function GlobalHeader() {
   return (
     <header className="global-header">
       <div className="global-header__container">
         <Link href={"/"} className="global-header__logo">
+          <Image
+            src="/globe.svg"
+            width={24}
+            height={24}
+            alt="Logotype"
+            className="logo__image"
+          ></Image>
           Product name
         </Link>
         <MainMenu />
