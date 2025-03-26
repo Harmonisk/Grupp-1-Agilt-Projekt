@@ -1,71 +1,56 @@
+@import "./components/_product-list.css";
+
 @layer components {
-  .product-list {
-    background-color: red;
-    @apply grid grid-cols-12 gap-8;
-    li {
-      @apply col-span-6 desktop:col-span-4 bg-amber-400;
-    }
-    .product-card__image {
-      @apply w-auto;
-    }
-  }
   .global-header {
-    @apply flex bg-amber-300;
+    @apply bg-amber-300 p-8;
   }
+  .global-header__container {
+    @apply flex gap-4;
+  }
+  .global-header__logo {
+    @apply flex items-center bg-amber-600 text-2xl text-nowrap;
+  }
+
   .main-menu {
     @apply overflow-x-hidden;
   }
   .main-menu__list {
     @apply flex;
     .main-menu__item {
-      @apply text-2xl;
+      @apply text-2xl text-lg;
     }
   }
 
-  .product-list {
-    background-color: red;
-    @apply grid grid-cols-12 gap-8;
-    li {
-      @apply col-span-6 desktop:col-span-4 bg-amber-400;
-    }
+  .sub-headline {
+    @apply p-8 flex justify-center;
   }
 
   .hero {
-    @apply flex flex-col items-center justify-center bg-amber-600 text-white p-8 gap-2 desktop:text-6xl;
-    h1 {
-      @apply text-4xl;
-    }
-    p {
-      @apply text-lg;
-    }
+    @apply flex flex-col items-center justify-center bg-gray-200  p-8 gap-2 aspect-[16/6];
   }
 
-  .selectable-product-list{
-    @apply flex flex-col;
-  }
 
-  .product-list{
-    @apply flex;
-  }
-
-  .btn {
+  .button {
     @apply px-4 py-2  bg-primary cursor-progress hover:bg-purple-400 rounded-2xl;
   }
 
   .main {
-    @apply bg-gray-100 text-gray-800 p-8;
+    @apply bg-gray-100 flex flex-col text-gray-800 p-8;
   }
 
   .container {
-    @apply mx-auto max-w-4xl bg-primary lg:bg-amber-600;
+    @apply mx-auto max-w-4xl;
   }
 
   .global-footer {
     @apply bg-gray-800 text-white p-8;
   }
 
-  .product-card {
-    @apply bg-yellow-300 p-4 md:bg-amber-600 md:p-2;
+  .button {
+    @apply p-4 border-2 flex gap-8;
+    &.navigate-to-cart-button__icon {
+      @apply bg-amber-500;
+    }
   }
 
   .header{
