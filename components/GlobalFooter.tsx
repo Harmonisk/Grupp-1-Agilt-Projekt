@@ -8,13 +8,15 @@ import ContactInfo from "./ContactInfo";
 export default function GlobalFooter() {
   return (
     <footer className="global-footer">
-      <div className="container">
-        <div className="wrapper">
-          <div className="footer-brand"></div>
-          <ContactInfo />
+      <div className="global-footer__container">
+        <div className="logo global-footer__logo">
+          <div className="logo__image"></div>
         </div>
+        <ContactInfo />
       </div>
-      <p>&copy; 2025 Company Name</p>
+      <small className="global-footer__copyright">
+        &copy; 2025 Company Name
+      </small>
     </footer>
   );
 }
