@@ -12,17 +12,13 @@ import SubHeadline from "@/components/SubHeadline";
 export default function Home() {
   return (
     <>
-      <GlobalHeader />
-
-      <Hero />
       <Main>
+        <Hero />
         <SubHeadline>Featured products</SubHeadline>
         <Container>
           <ProductList></ProductList>
         </Container>
       </Main>
-
-      <GlobalFooter />
     </>
   );
 }

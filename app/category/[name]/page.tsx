@@ -7,11 +7,9 @@ export default async function CategoryPage({params}:{params: Promise<{name: stri
     const name:string = (await params).name;
     return(
         <>
-            <GlobalHeader />
             <Main>
                 <h2>Category page for {name}</h2>
             </Main>
-            <GlobalFooter />
         </>
     );
 }
