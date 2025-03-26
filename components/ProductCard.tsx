@@ -1,4 +1,4 @@
-//Component: ProductCard.
+//Component: ProductCard..
 
 "use client";
 import AddToCartButton from "./AddToCartButton";
