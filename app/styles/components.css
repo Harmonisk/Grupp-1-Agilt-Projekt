@@ -1,4 +1,6 @@
 @import "./components/_product-list.css";
+@import "./components/_global-footer.css";
+@import "./components/_common.css";
 
 @layer components {
   .global-header {
@@ -29,7 +31,6 @@
     @apply flex flex-col items-center justify-center bg-gray-200  p-8 gap-2 aspect-[16/6];
   }
 
-
   .button {
     @apply px-4 py-2  bg-primary cursor-progress hover:bg-purple-400 rounded-2xl;
   }
@@ -42,10 +43,6 @@
     @apply mx-auto max-w-4xl;
   }
 
-  .global-footer {
-    @apply bg-gray-800 text-white p-8;
-  }
-
   .button {
     @apply p-4 border-2 flex gap-8;
     &.navigate-to-cart-button__icon {
@@ -53,14 +50,13 @@
     }
   }
 
-  .header{
-	@apply w-full flex items-center justify-center bg-amber-300  p-4 h-16 border-2 border-black;
-	h1 {
-		@apply text-black font-medium text-3xl font-sans;
-	}
-}
+  .header {
+    @apply w-full flex items-center justify-center bg-amber-300  p-4 h-16 border-2 border-black;
+    h1 {
+      @apply text-black font-medium text-3xl font-sans;
+    }
+  }
 
-  .footer{
-
+  .footer {
   }
 }
