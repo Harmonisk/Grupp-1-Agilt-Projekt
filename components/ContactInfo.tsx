@@ -6,16 +6,13 @@ import React from "react";
 
 export default function ContactInfo() {
   return (
-    <div className="contact-info">
-      <address>
-        <ul>
-          <li className="contact-info__phone">Phone: 555-555-555</li>
-          <li className="contact-info__email">
-            Email:
-            <a href="mailto:info@store.com">info@store.com</a>
-          </li>
-        </ul>
-      </address>
-    </div>
+    <address className="contact-info">
+      <ul>
+        <li className="contact-info__phone">Phone: 555-555-555</li>
+        <li className="contact-info__email">
+          Email: <a href="mailto:info@store.com">info@store.com</a>
+        </li>
+      </ul>
+    </address>
   );
 }
