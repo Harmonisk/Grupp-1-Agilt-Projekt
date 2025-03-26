@@ -1,0 +1,11 @@
+@layer components {
+  .global-header {
+    @apply bg-amber-300 p-8;
+  }
+  .global-header__container {
+    @apply flex gap-4;
+  }
+  .global-header__logo {
+    @apply flex items-center bg-amber-600 text-2xl text-nowrap;
+  }
+}
