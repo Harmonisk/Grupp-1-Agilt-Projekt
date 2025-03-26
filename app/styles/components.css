@@ -67,4 +67,15 @@
   .product-card {
     @apply bg-yellow-300 p-4 md:bg-amber-600 md:p-2;
   }
+
+  .header{
+	@apply w-full flex items-center justify-center bg-amber-300  p-4 h-16 border-2 border-black;
+	h1 {
+		@apply text-black font-medium text-3xl font-sans;
+	}
+}
+
+  .footer{
+
+  }
 }
