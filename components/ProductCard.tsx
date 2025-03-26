@@ -1,3 +1,5 @@
+//Component: ProductCard
+
 "use client";
 import AddToCartButton from "./AddToCartButton";
 import { fetchSingleProduct } from "@/actions/server-actions";
