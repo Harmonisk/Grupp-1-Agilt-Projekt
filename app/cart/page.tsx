@@ -21,6 +21,7 @@ export default function CartPage() {
                         <th>Antal</th>
                         <th>Pris styck</th>
                         <th>Pris totalt</th>
+                        <th>Ta bort</th>
                     </tr>
                 </thead>
                 <tbody>
