@@ -14,7 +14,7 @@ export default async function ProductCategoryPage({params}:{params: Promise<{nam
     return(
         <>
             <Main>
-                <PageHeader><h2>{category.name}</h2></PageHeader>
+                <PageHeader>{category.name}</PageHeader>
                 <SelectableProductList category={category} />
             </Main>
         </>
