@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import AddToCartButton from "./AddToCartButton";
 import { fetchSingleProduct } from "@/actions/server-actions";
 import React, { useEffect, useState } from "react";

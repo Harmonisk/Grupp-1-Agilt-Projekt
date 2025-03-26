@@ -34,11 +34,9 @@ export default async function ProductList({
 
   return (
     <ul className="product-list">
+      {/* Moved <li> inside of ProductCard */}
       {products.map((product) => (
-        <li key={product.id}>
-          {/* {...product} sends all props to ProductCard. */}
-          <ProductCard {...product} />
-        </li>
+        <ProductCard key={product.id} {...product} />
       ))}
     </ul>
   );
