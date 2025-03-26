@@ -38,8 +38,8 @@ export default function ProductCard({
         <Image
           src={product.images[0]}
           alt="product"
-          layout="fill"
-          objectFit="cover"
+          width={800}
+          height={600}
           onLoadingComplete={() => setImageLoaded(true)}
           className="product-card__image"
         />
