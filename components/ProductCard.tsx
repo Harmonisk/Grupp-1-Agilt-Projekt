@@ -6,6 +6,7 @@ import { fetchSingleProduct } from "@/actions/server-actions";
 import React, { useEffect, useState } from "react";
 import Product from "@/interfaces/product";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProductCard({
   id,
@@ -35,14 +36,16 @@ export default function ProductCard({
         </div>
       )}
       {product && (
-        <Image
-          src={product.images[0]}
-          alt="product"
-          width={800}
-          height={600}
-          onLoadingComplete={() => setImageLoaded(true)}
-          className="product-card__image"
-        />
+        <Link href={`product/${product.id}`} >
+          <Image
+            src={product.images[0]}
+            alt="product"
+            width={800}
+            height={600}
+            onLoadingComplete={() => setImageLoaded(true)}
+            className="product-card__image"
+          />
+        </Link>
       )}
 
       <div className="product-card__wrapper">
