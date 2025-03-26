@@ -36,7 +36,7 @@ export default function ProductCard({
         </div>
       )}
       {product && (
-        <Link href={`product/${product.id}`} >
+        <Link href={`/product/${product.id}`} >
           <Image
             src={product.images[0]}
             alt="product"
