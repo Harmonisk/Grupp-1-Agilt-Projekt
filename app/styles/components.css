@@ -40,6 +40,14 @@
     }
   }
 
+  .selectable-product-list{
+    @apply flex flex-col;
+  }
+
+  .product-list{
+    @apply flex;
+  }
+
   .btn {
     @apply px-4 py-2  bg-primary cursor-progress hover:bg-purple-400 rounded-2xl;
   }
