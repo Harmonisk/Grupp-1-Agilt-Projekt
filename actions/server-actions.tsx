@@ -1,5 +1,7 @@
 import Product from "@/interfaces/product";
 import Category from "@/interfaces/category";
+import { SearchResult } from "@/interfaces/searchresult";
+
 const BASE_URL = "https://dummyjson.com/products"
 
 export async function fetchAllProducts(limit:number=0,page:number=1, featured:boolean=false ){
@@ -45,3 +47,21 @@ export async function fetchProductsByCategory(category:Category, limit:number=0,
     return final;
 }
 
+export async function fetchSearch(query: string, limit: number = 0, page: number = 1){
+    const limitstr = limit > 0 ? `&limit=${limit}` : ""
+    const skip = (page - 1) * limit
+    const skipstr = page > 1 ? `&skip=${skip}` : ""
+    const fetchUrl = BASE_URL + "/search?q=" + query + limitstr + skipstr
+    const res: SearchResult = await fetchJSON(fetchUrl)
+    return res;
+}
+
+async function fetchJSON(url: string) {
+    console.log(url)
+    const response = await fetch(url)
+    if(!response.ok){
+        console.log("Fetch error: ", response)
+        throw new Error("Server error, invalid response: " + response.status)
+    }
+    return await response.json()
+}

@@ -1,5 +1,5 @@
 
-export function convertSPToString(sp: string | string[] | undefined): string {
+export function searchParamToString(sp: string | string[] | undefined): string {
     return Array.isArray(sp) ? sp[0] ?? "" : sp ?? "";
 }
 

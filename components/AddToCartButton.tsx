@@ -10,12 +10,13 @@ import Product from "@/interfaces/product";
 export default function AddToCartButton({
   product
 }: {
-  product: Product
+  product: Product | null
 }) {
   const pc = useProductContext()
 
   const handleClick = () => {
-    pc.setAmount(product, (product.amount ?? 0) + 1)
+    if (product)
+      pc.setAmount(product, (product.amount ?? 0) + 1)
   };
 
   return (
