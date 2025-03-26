@@ -60,7 +60,7 @@ export default function ProductCard({
             <h4 className="product-info__title">{product && product.title}</h4>
           )}
 
-          <AddToCartButton />
+          <AddToCartButton product={product} />
         </div>
       </div>
     </li>
