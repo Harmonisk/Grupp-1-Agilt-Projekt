@@ -6,6 +6,7 @@ https://tailwindcss.com/docs/theme#theme-variable-namespaces
 */
 
 @import "tailwindcss";
+@import "./styles/typography.css";
 @import "./styles/components.css";
 
 :root {
@@ -30,12 +31,12 @@ https://tailwindcss.com/docs/theme#theme-variable-namespaces
   --breakpoint-desktop: 1024px;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);

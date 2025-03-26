@@ -3,6 +3,7 @@ import Product from "@/interfaces/product";
 import Category from "@/interfaces/category";
 import { fetchAllProducts } from "@/actions/server-actions";
 import Image from "next/image";
+import SelectableProductList from "@/components/SelectableProductList";
 
 
 export default async function Home() {
@@ -12,7 +13,8 @@ export default async function Home() {
     console.log(typeof response);
     return (
     <>
-      {response?.map((prod,index)=>(<div key={index}><h2>{prod.id}</h2><h2>{prod.title}</h2></div>))}
+      {/*response?.map((prod,index)=>(<div key={index}><h2>{prod.id}</h2><h2>{prod.title}</h2></div>))*/}
+      <SelectableProductList />
       
     </>
     

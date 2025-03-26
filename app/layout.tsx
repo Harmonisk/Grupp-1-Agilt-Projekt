@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ProductProvider } from "@/components/ProductContext";
+import GlobalHeader from "@/components/GlobalHeader";
+import GlobalFooter from "@/components/GlobalFooter";
 
 export const metadata: Metadata = {
   title: "This amazing store – Buy stuff",
@@ -17,8 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        
         <ProductProvider>
+        <GlobalHeader />
           {children}
+        <GlobalFooter />
         </ProductProvider>
       </body>
     </html>
