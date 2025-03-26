@@ -1,19 +1,30 @@
 import Product from "@/interfaces/product";
 import Category from "@/interfaces/category";
 import { SearchResult } from "@/interfaces/searchresult";
+// import { console } from "inspector";
 
 const BASE_URL = "https://dummyjson.com/products"
 
 export async function fetchAllProducts(limit:number=0,page:number=1, featured:boolean=false ){
-    const fetchUrl = `${BASE_URL}?${ limit>0 ? 'limit='+limit+'&skip='+limit*page : 'limit=0'}`;
-    const response = await fetch(fetchUrl);
-    if(!response.ok){
+
+	if(featured)
+		limit=0;
+	const fetchUrl = `${BASE_URL}?${ limit>0 ? 'limit='+limit+'&skip='+limit*page : 'limit=0'}`;
+	const response = await fetch(fetchUrl);
+	if(!response.ok){
         throw new Error(`Server error, invalid response: ${response}`);
     }
-    
-    const data:{products:Product[]} = await response.json();
-    const {products}=data;
-    const final:Product[]=[...products]
+	const data:{products:Product[]} = await response.json();
+
+	if(featured){
+		const updatedProducts = data.products.map((product) => ({...product, featuredScore:product.discountPercentage * product.rating}) )
+		.sort((a, b) => b.featuredScore - a.featuredScore);
+		
+		const final:Product[]=updatedProducts;
+		final.map((product) => console.log(product.featuredScore));
+	}
+
+	const final:Product[]=data.products;
     return final;
 }
 

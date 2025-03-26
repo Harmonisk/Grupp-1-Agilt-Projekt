@@ -10,5 +10,8 @@ export default interface Product{
     brand: string;
     thumbnail: string;
     images: string[];
+	rating: number;
+	discountPercentage: number;
+	featuredScore?: number;
     amount?: number;
 }
