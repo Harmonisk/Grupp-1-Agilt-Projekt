@@ -7,11 +7,7 @@ export default function ToggleMenuButton() {
 
   const handleMenuToggle = () => {
     setMenuVisible((prev) => !prev); // Flip between false/true, if false flip to true and vice versa.
-    console.log("Toggled menuVisible:", !menuVisible);
   };
-
-  // Log current state to verify it's being updated
-  console.log("Current menuVisible:", menuVisible);
 
   return (
     <Button
