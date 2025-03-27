@@ -5,12 +5,12 @@
 // - the global header has a navigation section with links to all major pages
 // - the global header contains a cart button
 
-import React from "react";
 import MainMenu from "./MainMenu";
 import NavigateToCartButton from "./NavigateToCartButton";
 import Link from "next/link";
 import Image from "next/image";
 import SearchBar from "./SearchBar";
+import ToggleMenuButton from "./ToggleMenuButton";
 export default function GlobalHeader() {
   return (
     <header className="global-header">
@@ -25,6 +25,7 @@ export default function GlobalHeader() {
           ></Image>
           Product name
         </Link>
+        <ToggleMenuButton />
         <MainMenu />
         <SearchBar />
         <NavigateToCartButton />
