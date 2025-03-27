@@ -1,12 +1,17 @@
 //Component: ToogleMenuButton
 //Description: The user can show hide menu on smaller breakpoints
-"use client";
-import React, { useState } from "react";
+
 import Button from "./Button";
 
-export default function ToggleMenuButton() {
-  const [menuVisible, setMenuVisible] = useState(false);
+type ToggleMenuButtonProps = {
+  menuVisible: boolean;
+  setMenuVisible: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
+export default function ToggleMenuButton({
+  menuVisible,
+  setMenuVisible,
+}: ToggleMenuButtonProps) {
   const handleMenuToggle = () => {
     setMenuVisible((prev) => !prev); // Flip between false/true, if false flip to true and vice versa.
   };
@@ -15,7 +20,7 @@ export default function ToggleMenuButton() {
     <Button
       onClick={handleMenuToggle}
       className="toggle-menu-button"
-      data-toggle={menuVisible}
+      data-toggle={menuVisible ? true : false}
     >
       <span className="toggle-menu-button__icon"></span>
     </Button>
