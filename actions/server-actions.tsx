@@ -1,20 +1,32 @@
 import Product from "@/interfaces/product";
 import Category from "@/interfaces/category";
 import { SearchResult } from "@/interfaces/searchresult";
+// import { console } from "inspector";
 
 const BASE_URL = "https://dummyjson.com/products"
 
 export async function fetchAllProducts(limit:number=0,page:number=1, featured:boolean=false ){
-    const fetchUrl = `${BASE_URL}?${ limit>0 ? 'limit='+limit+'&skip='+limit*page : 'limit=0'}`;
-    const response = await fetch(fetchUrl);
-    if(!response.ok){
+	const numOfProducts:number = limit;
+	if(featured){
+		limit=0;
+	}
+	const fetchUrl = `${BASE_URL}?${ limit>0 ? 'limit='+limit+'&skip='+limit*page : 'limit=0'}`;
+	const response = await fetch(fetchUrl);
+	if(!response.ok){
         throw new Error(`Server error, invalid response: ${response}`);
     }
-    
-    const data:{products:Product[]} = await response.json();
-    const {products}=data;
-    const final:Product[]=[...products]
-    return final;
+	const data:{products:Product[]} = await response.json();
+	let final:Product[];
+	if(featured){
+		// product with the most featuredScore gets displayed first. 
+		// featuredScore = product.discountPercentage * product.rating
+		const updatedProducts = data.products.map((product) => ({...product, featuredScore:product.discountPercentage * product.rating}) )
+		.sort((a, b) => b.featuredScore - a.featuredScore);
+		final=updatedProducts;
+	}else{
+		final=data.products;
+	}
+    return final.slice(0, numOfProducts);
 }
 
 export async function fetchSingleProduct(id:number){
