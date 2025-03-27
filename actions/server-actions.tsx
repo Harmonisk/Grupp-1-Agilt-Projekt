@@ -69,11 +69,22 @@ export async function fetchSearch(query: string, limit: number = 0, page: number
 }
 
 async function fetchJSON(url: string) {
-    console.log(url)
+    //console.log(url)
     const response = await fetch(url)
     if(!response.ok){
         console.log("Fetch error: ", response)
         throw new Error("Server error, invalid response: " + response.status)
     }
     return await response.json()
+}
+
+
+export async function numberOfProducts(category:Category | undefined){
+    let amount = 0;
+    const searchString = category ? `${category.url}?limit=0` : `${BASE_URL}?limit=0` ;
+    console.log(searchString);
+    const data = await fetchJSON(searchString);
+    amount = data.products.length;
+    console.log(amount);
+    return amount;
 }

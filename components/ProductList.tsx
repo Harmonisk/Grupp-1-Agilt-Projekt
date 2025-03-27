@@ -1,6 +1,8 @@
 //Component: ProductList
 //Description: Som utvecklare vill jag kunna visa kunden produkter i form av en lista.
 
+"use client";
+
 import React from "react";
 import ProductCard from "./ProductCard";
 import {
@@ -9,6 +11,7 @@ import {
 } from "@/actions/server-actions";
 import Product from "@/interfaces/product";
 import Category from "@/interfaces/category";
+import { use, useEffect, useState } from "react";
 
 interface ProductListProps {
   category?: Category;
@@ -17,20 +20,28 @@ interface ProductListProps {
   featured?: boolean;
 }
 
-export default async function ProductList({
+
+
+export default function ProductList({
   category,
   limit = 8, // Default values
   page = 1,
   featured = false,
 }: ProductListProps) {
-  let products: Product[];
+  const [products, setProducts] = useState<Product[]>([]);
 
-  if (category) {
-    products = await fetchProductsByCategory(category);
-  } else {
-    //Featured is to be decided around and logic should be inside the fetchAllProducts function
-    products = await fetchAllProducts(limit, page, featured);
+  const  setProds = async()=>{
+    if (category) {
+        setProducts(await fetchProductsByCategory(category));
+      } else {
+        //Featured is to be decided around and logic should be inside the fetchAllProducts function
+        setProducts(await fetchAllProducts(limit, page, featured));
+      }
   }
+  useEffect(()=>{
+    setProds();   
+  })
+  
 
   return (
     <ul className="product-list">
