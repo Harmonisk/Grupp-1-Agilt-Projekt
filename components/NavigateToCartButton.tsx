@@ -2,6 +2,7 @@
 import React from "react";
 import Button from "./Button";
 import { useRouter } from "next/navigation";
+import Icon from "./Icon";
 
 export default function NavigateToCartButton() {
   const router = useRouter();
@@ -11,7 +12,10 @@ export default function NavigateToCartButton() {
 
   return (
     <Button onClick={handleClick} className="navigate-to-cart-button">
-      <span className="navigate-to-cart-button__icon"></span>
+      <Icon
+        className="navigate-to-cart-button__icon"
+        type="shopping_bag"
+      ></Icon>
       Checkout
     </Button>
   );
