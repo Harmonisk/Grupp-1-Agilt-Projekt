@@ -1,6 +1,6 @@
 @layer components {
   .global-header {
-    @apply bg-amber-300 p-8;
+    @apply bg-amber-300 p-8 z-1;
   }
   .global-header__container {
     @apply flex justify-between gap-4;
@@ -8,18 +8,21 @@
   .global-header__logo {
     @apply flex items-center text-2xl text-nowrap;
   }
-
+  .global-header__actions {
+    @apply z-20 flex gap-4;
+  }
   /* Logic for toggle .main-menu */
   .global-header__container:has(
       .global-header__actions .toggle-menu-button[data-toggle="false"]
     )
     .main-menu {
-    @apply hidden;
+    @apply hidden desktop:block;
   }
-  .global-header__container:has(
-      .global-header__actions .toggle-menu-button[data-toggle="true"]
-    )
-    .main-menu {
-    @apply visible;
+
+  .main-menu[data-toggle="true"] {
+    @apply absolute block w-full bg-amber-200 z-0;
+  }
+  .main-menu[data-toggle="true"] .main-menu__list {
+    @apply flex flex-col;
   }
 }
