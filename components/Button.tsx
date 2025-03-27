@@ -9,12 +9,18 @@ type ButtonProps = {
   children: React.ReactNode;
   className?: string; // We add the className prop to allow for custom styling
   onClick?: () => void;
-};
-export default function Button({ children, onClick, className }: ButtonProps) {
+  "data-toggle"?: boolean;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+export default function Button({
+  children,
+  onClick,
+  className,
+  ...rest
+}: ButtonProps) {
   // We add the 'button' class to the button to easily style all buttons via Tailwind CSS
   const classes = `button ${className}`;
   return (
-    <button onClick={onClick} className={classes}>
+    <button onClick={onClick} className={classes} {...rest}>
       {children}
     </button>
   );
