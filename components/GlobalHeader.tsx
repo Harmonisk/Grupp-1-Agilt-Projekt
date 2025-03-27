@@ -28,11 +28,14 @@ export default function GlobalHeader() {
           ></Image>
           <span className="logo--text">Product name</span>
         </Link>
-        <MainMenu menuVisible={menuVisible} setMenuVisible={setMenuVisible} />
+        <MainMenu menuVisible={menuVisible} />
         <SearchBar />
         <div className="global-header__actions">
           <NavigateToCartButton />
-          <ToggleMenuButton menuVisible={menuVisible} />
+          <ToggleMenuButton
+            menuVisible={menuVisible}
+            setMenuVisible={setMenuVisible}
+          />
         </div>
       </div>
     </header>
