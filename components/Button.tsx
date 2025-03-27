@@ -6,10 +6,10 @@
 import React from "react";
 
 type ButtonProps = {
-  children: React.ReactNode;
+  children: React.ReactNode; // For passing content like text, icons, etc.
   className?: string; // We add the className prop to allow for custom styling
-  onClick?: () => void;
-  "data-toggle"?: boolean;
+  onClick?: () => void; // Added for clarity, already passed with React.ButtonHTMLAttributes<HTMLButtonElement>
+  "data-toggle"?: boolean; // Define data-toggle as a optional data-attribute
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 export default function Button({
   children,
