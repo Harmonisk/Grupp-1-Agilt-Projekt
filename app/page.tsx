@@ -16,7 +16,7 @@ export default function Home() {
         <Hero />
         <SubHeadline>Featured products</SubHeadline>
         <Container>
-          <ProductList></ProductList>
+          <ProductList featured={true}></ProductList>
         </Container>
       </Main>
     </>

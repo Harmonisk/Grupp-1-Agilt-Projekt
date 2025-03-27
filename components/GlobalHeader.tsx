@@ -10,6 +10,7 @@ import MainMenu from "./MainMenu";
 import NavigateToCartButton from "./NavigateToCartButton";
 import Link from "next/link";
 import Image from "next/image";
+import SearchBar from "./SearchBar";
 export default function GlobalHeader() {
   return (
     <header className="global-header">
@@ -25,6 +26,7 @@ export default function GlobalHeader() {
           Product name
         </Link>
         <MainMenu />
+        <SearchBar />
         <NavigateToCartButton />
       </div>
     </header>
