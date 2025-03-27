@@ -8,4 +8,18 @@
   .global-header__logo {
     @apply flex items-center text-2xl text-nowrap;
   }
+
+  /* Logic for toggle .main-menu */
+  .global-header__container:has(
+      .global-header__actions .toggle-menu-button[data-toggle="false"]
+    )
+    .main-menu {
+    @apply hidden;
+  }
+  .global-header__container:has(
+      .global-header__actions .toggle-menu-button[data-toggle="true"]
+    )
+    .main-menu {
+    @apply visible;
+  }
 }

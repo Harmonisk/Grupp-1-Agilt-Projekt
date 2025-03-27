@@ -1,5 +1,10 @@
 @layer components {
   .toggle-menu-button {
-    @apply bg-amber-300 hidden;
+  }
+  .toggle-menu-button[data-toggle="true"] {
+    @apply text-2xl w-18; /* Show the button when data-toggle="true" */
+  }
+  .toggle-menu-button[data-toggle="true"] {
+    @apply text-2xl w-18; /* Show the button when data-toggle="true" */
   }
 }
