@@ -1,4 +1,3 @@
-
 export default interface Product{
     id: number;
     title: string;
@@ -10,8 +9,8 @@ export default interface Product{
     brand: string;
     thumbnail: string;
     images: string[];
-	rating: number;
-	discountPercentage: number;
-	featuredScore?: number;
+	  rating: number;
+	  discountPercentage: number;
+	  featuredScore?: number;
     amount?: number;
 }

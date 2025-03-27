@@ -9,6 +9,7 @@ import MainMenu from "./MainMenu";
 import NavigateToCartButton from "./NavigateToCartButton";
 import Link from "next/link";
 import Image from "next/image";
+import SearchBar from "./SearchBar";
 import ToggleMenuButton from "./ToggleMenuButton";
 export default function GlobalHeader() {
   return (
@@ -26,6 +27,7 @@ export default function GlobalHeader() {
         </Link>
         <ToggleMenuButton />
         <MainMenu />
+        <SearchBar />
         <NavigateToCartButton />
       </div>
     </header>
