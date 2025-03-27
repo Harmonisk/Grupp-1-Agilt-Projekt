@@ -16,8 +16,9 @@ export default function ToggleMenuButton() {
       onClick={handleMenuToggle}
       className="toggle-menu-button"
       data-toggle={menuVisible}
+      alt="Toggle Menu Button"
     >
-      <span className="toggle-menu-button__icon"></span> Menu
+      <span className="toggle-menu-button__icon"></span>
     </Button>
   );
 }
