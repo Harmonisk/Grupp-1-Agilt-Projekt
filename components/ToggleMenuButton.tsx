@@ -1,3 +1,5 @@
+//Component: ToogleMenuButton
+//Description: The user can show hide menu on smaller breakpoints
 "use client";
 import React, { useState } from "react";
 import Button from "./Button";
