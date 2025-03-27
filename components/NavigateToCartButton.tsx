@@ -12,7 +12,10 @@ export default function NavigateToCartButton() {
 
   return (
     <Button onClick={handleClick} className="navigate-to-cart-button">
-      <Icon className="navigate-to-cart-button__icon" type="home"></Icon>
+      <Icon
+        className="navigate-to-cart-button__icon"
+        type="shopping_bag"
+      ></Icon>
       Checkout
     </Button>
   );
