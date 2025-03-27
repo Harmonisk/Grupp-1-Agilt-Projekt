@@ -4,14 +4,17 @@
 // - A header section that is available globally to all pages exists
 // - the global header has a navigation section with links to all major pages
 // - the global header contains a cart button
-
+"use client";
 import MainMenu from "./MainMenu";
 import NavigateToCartButton from "./NavigateToCartButton";
 import Link from "next/link";
 import Image from "next/image";
 import SearchBar from "./SearchBar";
 import ToggleMenuButton from "./ToggleMenuButton";
+import { useState } from "react";
 export default function GlobalHeader() {
+  const [menuVisible, setMenuVisible] = useState(false);
+
   return (
     <header className="global-header">
       <div className="global-header__container">
@@ -25,11 +28,11 @@ export default function GlobalHeader() {
           ></Image>
           <span className="logo--text">Product name</span>
         </Link>
-        <MainMenu />
+        <MainMenu menuVisible={menuVisible} setMenuVisible={setMenuVisible} />
         <SearchBar />
         <div className="global-header__actions">
           <NavigateToCartButton />
-          <ToggleMenuButton />
+          <ToggleMenuButton menuVisible={menuVisible} />
         </div>
       </div>
     </header>
