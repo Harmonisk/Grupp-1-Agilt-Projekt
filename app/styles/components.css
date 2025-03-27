@@ -5,7 +5,10 @@
 
 @layer components {
   .main-menu {
-    @apply overflow-x-hidden;
+    @apply overflow-x-hidden bg-amber-500 lg:bg-amber-700 hidden lg:block;
+  }
+  #toggleMenu:checked .main-menu {
+    @apply lg:block;
   }
   .main-menu__list {
     @apply flex;
