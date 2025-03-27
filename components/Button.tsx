@@ -11,7 +11,7 @@ type ButtonProps = {
   onClick?: () => void;
 };
 export default function Button({ children, onClick, className }: ButtonProps) {
-  // We add the 'btn' class to the button to easily style all buttons via Tailwind CSS
+  // We add the 'button' class to the button to easily style all buttons via Tailwind CSS
   const classes = `button ${className}`;
   return (
     <button onClick={onClick} className={classes}>
