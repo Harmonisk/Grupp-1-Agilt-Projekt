@@ -10,7 +10,7 @@ export async function fetchAllProducts(limit:number=0,page:number=1, featured:bo
 	if(featured){
 		limit=0;
 	}
-	const fetchUrl = `${BASE_URL}?${ limit>0 ? 'limit='+limit+'&skip='+limit*page : 'limit=0'}`;
+	const fetchUrl = `${BASE_URL}?${ limit>0 ? 'limit='+limit+'&skip='+limit*(page-1) : 'limit=0'}`;
 	const response = await fetch(fetchUrl);
 	if(!response.ok){
         throw new Error(`Server error, invalid response: ${response}`);
