@@ -6,10 +6,14 @@ import Category from "@/interfaces/category";
 import Link from "next/link";
 import React from "react";
 
-export default async function MainMenu() {
+type MainMenuProps = {
+  menuVisible: boolean;
+};
+
+export default async function MainMenu({ menuVisible }: MainMenuProps) {
   const navItems: Category[] = await fetchAllCategories();
   return (
-    <nav className="main-menu">
+    <nav className="main-menu" data-toggle={menuVisible ? "true" : "false"}>
       <ul className="main-menu__list">
         {navItems.map((item) => (
           <li key={item.slug} className="main-menu__item">
