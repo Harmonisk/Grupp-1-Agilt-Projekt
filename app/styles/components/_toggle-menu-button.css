@@ -1,5 +1,5 @@
 @layer components {
   .toggle-menu-button {
-    @apply bg-amber-300;
+    @apply bg-amber-300 hidden;
   }
 }
