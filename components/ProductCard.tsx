@@ -22,7 +22,7 @@ export default function ProductCard({
     async function getProduct() {
       const fetchedProduct = await fetchSingleProduct(id ?? 1);
       setProduct(fetchedProduct);
-      console.log(fetchedProduct);
+      //console.log(fetchedProduct);
     }
     if (prod) setProduct(prod);
     else getProduct();

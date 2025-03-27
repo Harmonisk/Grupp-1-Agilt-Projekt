@@ -2,8 +2,8 @@
 import Button from "./Button"
 
 export default function Pagination({
-    currentPage,
-    maxPage,
+    currentPage = 1,
+    maxPage = 1,
     onFirst,
     onPrev,
     onNext,
