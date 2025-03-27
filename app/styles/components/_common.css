@@ -3,17 +3,6 @@
     @apply bg-white w-6 h-6 md:w-8 sm:h-8;
   }
 
-  .main-menu {
-    @apply overflow-x-hidden bg-amber-500 lg:bg-amber-700 hidden lg:block;
-  }
-
-  .main-menu__list {
-    @apply flex;
-    .main-menu__item {
-      @apply text-2xl text-lg;
-    }
-  }
-
   .sub-headline {
     @apply p-8 flex justify-center;
   }

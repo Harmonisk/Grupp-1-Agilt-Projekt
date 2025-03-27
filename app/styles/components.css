@@ -1,6 +1,8 @@
 @import "./components/_product-list.css";
 
 @import "./components/_global-header.css";
+@import "./components/_main-menu.css";
+
 @import "./components/_toggle-menu-button.css";
 
 @import "./components/_global-footer.css";
