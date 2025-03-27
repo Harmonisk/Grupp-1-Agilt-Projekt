@@ -21,14 +21,16 @@ export default function GlobalHeader() {
             width={24}
             height={24}
             alt="Logotype"
-            className="logo__image"
+            className="logo--image"
           ></Image>
-          Product name
+          <span className="logo--text">Product name</span>
         </Link>
-        <ToggleMenuButton />
         <MainMenu />
         <SearchBar />
-        <NavigateToCartButton />
+        <div className="global-header__actions">
+          <NavigateToCartButton />
+          <ToggleMenuButton />
+        </div>
       </div>
     </header>
   );
