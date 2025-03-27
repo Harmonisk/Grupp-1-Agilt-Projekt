@@ -23,7 +23,7 @@ export default function ToggleMenuButton({
       className="toggle-menu-button"
       data-toggle={menuVisible ? true : false}
     >
-      <Icon className="toggle-menu-button__icon" type="home"></Icon>
+      <Icon className="toggle-menu-button__icon" type="lunch_dining"></Icon>
     </Button>
   );
 }
