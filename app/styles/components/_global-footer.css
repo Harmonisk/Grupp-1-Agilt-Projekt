@@ -1,9 +1,8 @@
 @layer components {
   .global-footer {
-    @apply bg-gray-800 text-white p-8;
+    @apply bg-zinc-400 text-white p-8;
   }
   .global-footer__logo {
-    @apply bg-amber-400;
   }
 
   .global-footer__container {

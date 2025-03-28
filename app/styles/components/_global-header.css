@@ -1,12 +1,15 @@
 @layer components {
   .global-header {
-    @apply bg-amber-300 p-8 z-1;
+    @apply p-8 z-1 fixed w-full bg-white opacity-90;
   }
   .global-header__container {
-    @apply flex justify-between gap-4;
+    @apply flex justify-between gap-4 items-center;
   }
   .global-header__logo {
-    @apply flex items-center text-2xl text-nowrap;
+    @apply flex items-center text-2xl text-nowrap gap-2 flex-wrap;
+  }
+  .global-header__text {
+    @apply text-wrap;
   }
   .global-header__actions {
     @apply z-20 flex gap-4;
@@ -17,12 +20,5 @@
     )
     .main-menu {
     @apply hidden desktop:block;
-  }
-
-  .main-menu[data-toggle="true"] {
-    @apply absolute block w-full bg-amber-200 z-0;
-  }
-  .main-menu[data-toggle="true"] .main-menu__list {
-    @apply flex flex-col;
   }
 }

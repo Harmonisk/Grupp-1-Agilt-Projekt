@@ -36,7 +36,7 @@ export default function ProductCard({
         </div>
       )}
       {product && (
-        <Link href={`/product/${product.id}`} >
+        <Link href={`/product/${product.id}`}>
           <Image
             src={product.images[0]}
             alt="product"
@@ -51,15 +51,13 @@ export default function ProductCard({
       <div className="product-card__wrapper">
         <div className="product-info">
           {imageLoaded && (
+            <h4 className="product-info__title">{product && product.title}</h4>
+          )}
+          {imageLoaded && (
             <div className="product-info__price">
               {product && product.price} kr
             </div>
           )}
-
-          {imageLoaded && (
-            <h4 className="product-info__title">{product && product.title}</h4>
-          )}
-
           <AddToCartButton product={product} />
         </div>
       </div>

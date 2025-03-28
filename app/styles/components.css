@@ -1,3 +1,5 @@
+@import "./components/_common.css";
+@import "./components/_hero.css";
 @import "./components/_product-list.css";
 
 @import "./components/_global-header.css";
@@ -6,4 +8,3 @@
 @import "./components/_toggle-menu-button.css";
 
 @import "./components/_global-footer.css";
-@import "./components/_common.css";
