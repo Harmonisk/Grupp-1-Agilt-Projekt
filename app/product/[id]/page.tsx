@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Product from "./product";
 import { fetchSingleProduct } from "@/actions/server-actions";
+import Main from "@/components/Main";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: number }> }): Promise<Metadata> {
   const id = (await params).id;
@@ -12,8 +13,8 @@ export default async function ProductPage({ params }: { params: Promise<{ id: nu
   const id = (await params).id;
 
   return (
-    <main>
+    <Main>
       <Product id={id} />
-    </main>
+    </Main>
   );
 }

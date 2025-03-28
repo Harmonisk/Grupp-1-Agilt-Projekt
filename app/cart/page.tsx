@@ -7,11 +7,13 @@ import Button from "@/components/Button";
 export default function CartPage() {
     return (
         <Main>
-            <h2>Cart Page</h2>
-            <CartTotal />
-            <Button>Betala</Button>
-            <ClearButton />
+            <h2 className="p-4">Cart Page</h2>
             <CartList />
+            <CartTotal />
+            <div className="flex justify-between">
+                <ClearButton />
+                <Button>Betala</Button>
+            </div>
         </Main>
     );
 }

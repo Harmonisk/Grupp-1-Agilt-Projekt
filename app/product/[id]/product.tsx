@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { fetchSingleProduct } from "@/actions/server-actions";
+import AddToCartButton from "@/components/AddToCartButton";
 
 export default async function Product({ id }: {id: number}) {
     const product = await fetchSingleProduct(id);
@@ -24,7 +25,7 @@ export default async function Product({ id }: {id: number}) {
                 <h3 className="text-lg">{product.brand}</h3>
                 <p>{product.description}</p>
                 <div>{product.price} kr</div>
-                <button>Köp</button>
+                <AddToCartButton product={product} />
             </div>
 
         </div>
