@@ -8,6 +8,7 @@
 import React from "react";
 import Button from "./Button";
 import Icon from "./Icon";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -17,18 +18,22 @@ export default function Hero() {
         Here you find all things that you almost need.
       </p>
       <div className="button-wrapper">
+        <Link href="/category/fragrances">
         <Button
           onClick={() => console.log("Button clicked")}
           className="hero__button hero__button--primary"
         >
           Let&apos;s
         </Button>
+        </Link>
+        <Link href="/category/beauty">
         <Button
           onClick={() => console.log("Button clicked")}
           className="hero__button hero__button--primary"
         >
           <Icon type="celebration"></Icon>party!
         </Button>
+        </Link>
       </div>
     </div>
   );
