@@ -1,0 +1,19 @@
+@layer components {
+  .main-menu {
+    @apply overflow-x-scroll  justify-center hidden lg:block h-screen desktop:h-auto;
+  }
+
+  .main-menu__list {
+    @apply flex flex-col desktop:flex-row w-full gap-4;
+  }
+  .main-menu__item {
+    @apply text-lg whitespace-nowrap;
+  }
+
+  .main-menu[data-toggle="true"] {
+    @apply absolute left-0 top-0 block w-full bg-amber-200 z-0;
+  }
+  .main-menu[data-toggle="true"] .main-menu__list {
+    @apply flex flex-col;
+  }
+}

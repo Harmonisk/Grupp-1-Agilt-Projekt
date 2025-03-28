@@ -1,6 +1,6 @@
 @layer components {
   .toggle-menu-button {
-    @apply hidden text-2xl w-18;
+    @apply desktop:hidden;
   }
   .toggle-menu-button[data-toggle="false"] {
     @apply bg-amber-700 /* Show the button when data-toggle="true" */;

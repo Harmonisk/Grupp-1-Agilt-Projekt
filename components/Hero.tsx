@@ -7,6 +7,7 @@
 
 import React from "react";
 import Button from "./Button";
+import Icon from "./Icon";
 
 export default function Hero() {
   return (
@@ -15,12 +16,20 @@ export default function Hero() {
       <p className="hero__description">
         Here you find all things that you almost need.
       </p>
-      <Button
-        onClick={() => console.log("Button clicked")}
-        className="hero__button hero__button--primary"
-      >
-        Come on shopping!
-      </Button>
+      <div className="button-wrapper">
+        <Button
+          onClick={() => console.log("Button clicked")}
+          className="hero__button hero__button--primary"
+        >
+          Let&apos;s
+        </Button>
+        <Button
+          onClick={() => console.log("Button clicked")}
+          className="hero__button hero__button--primary"
+        >
+          <Icon type="celebration"></Icon>party!
+        </Button>
+      </div>
     </div>
   );
 }
