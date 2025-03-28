@@ -16,11 +16,11 @@ export default function Pagination({
     onNext?: () => void,
     onLast?: () => void,
 }) {
-    return (<>
+    return (<div className="flex gap-4">
         {onFirst && <Button onClick={onFirst}>&lt;&lt;&lt;</Button>}
         {onPrev && <Button onClick={onPrev}>&lt;</Button>}
         Sida {currentPage} av {maxPage}
         {onNext && <Button onClick={onNext}>&gt;</Button>}
         {onLast && <Button onClick={onLast}>&gt;&gt;&gt;</Button>}
-    </>)
+    </div>)
 }
