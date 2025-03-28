@@ -48,7 +48,7 @@ export async function fetchAllCategories(){
 }
 
 export async function fetchProductsByCategory(category:Category, limit:number=0, page:number=0){
-    const fetchUrl = `${category.url}?${ limit>0? 'limit='+limit+'&skip='+limit*page : 'limit=0'}`;
+    const fetchUrl = `${category.url}?${ limit>0? 'limit='+limit+'&skip='+limit*(page-1) : 'limit=0'}`;
     const response = await fetch(fetchUrl);
     if(!response.ok){
         throw new Error(`Server error, invalid response: ${response}`)

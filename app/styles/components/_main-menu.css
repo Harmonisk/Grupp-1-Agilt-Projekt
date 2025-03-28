@@ -1,6 +1,6 @@
 @layer components {
   .main-menu {
-    @apply overflow-x-scroll  justify-center hidden lg:block h-screen desktop:h-auto;
+    @apply /* overflow-x-scroll */  justify-center hidden lg:block h-screen desktop:h-auto;
   }
 
   .main-menu__list {

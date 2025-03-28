@@ -15,7 +15,7 @@ export default async function ProductCategoryPage({params}:{params: Promise<{nam
         <>
             <Main>
                 <Header title={category.name} />
-                <SelectableProductList category={category} />
+                <SelectableProductList category={category} limit={8}/>
             </Main>
         </>
     );

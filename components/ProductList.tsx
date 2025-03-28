@@ -32,7 +32,7 @@ export default function ProductList({
 
   const  setProds = async()=>{
     if (category) {
-        setProducts(await fetchProductsByCategory(category));
+        setProducts(await fetchProductsByCategory(category,limit,page));
       } else {
         //Featured is to be decided around and logic should be inside the fetchAllProducts function
         setProducts(await fetchAllProducts(limit, page, featured));

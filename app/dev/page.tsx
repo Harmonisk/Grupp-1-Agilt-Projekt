@@ -18,7 +18,7 @@ export default async function Home() {
     return (
     <>
       {/*response?.map((prod,index)=>(<div key={index}><h2>{prod.id}</h2><h2>{prod.title}</h2></div>))*/}
-     <SelectableProductList />
+     <SelectableProductList category={cats[10]}/>
       
     </>
     

@@ -19,7 +19,7 @@ interface SelectableProductListProps{
 
 export default function SelectableProductList({
   category=undefined,
-  limit=50,
+  limit=8,
   page=1,
   featured=false,
 }: SelectableProductListProps) {

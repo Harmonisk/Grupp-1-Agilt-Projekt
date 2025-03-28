@@ -26,7 +26,7 @@ export default function MainMenu({ menuVisible }: MainMenuProps) {
   return (
     <nav className="main-menu" data-toggle={menuVisible ? "true" : "false"}>
       <ul className="main-menu__list">
-        {navItems.map((item) => (
+        {navItems.slice(0,8).map((item) => (
           <li key={item.slug} className="main-menu__item">
             <Link href={`/category/${item.slug}`} className="main-menu__link">
               {item.name}
